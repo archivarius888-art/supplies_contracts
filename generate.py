@@ -117,21 +117,16 @@ def _render_python(contract: Contract) -> str:
     lines = [
         f'"""Auto-generated from {contract.source_path.name}."""',
         "",
+        "from supplies_contracts._choices import TextChoices",
         "",
-        f"class {contract.class_name}:",
+        "",
+        f"class {contract.class_name}(TextChoices):",
         "    __slots__ = ()",
         "",
     ]
     for item in contract.items:
-        lines.append(f'    {item.code} = "{item.code}"')
-
-    lines.extend(["", "    TYPES = ("])
-    for item in contract.items:
-        lines.append(f'        ({item.code}, "{item.title}"),')
-    lines.extend(["    )", "", "    TITLE_BY_CODE = {"])
-    for item in contract.items:
-        lines.append(f'        {item.code}: "{item.title}",')
-    lines.extend(["    }", ""])
+        lines.append(f'    {item.code} = "{item.code}", "{item.title}"')
+    lines.append("")
 
     return "\n".join(lines)
 

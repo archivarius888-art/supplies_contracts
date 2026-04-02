@@ -1,24 +1,12 @@
 """Auto-generated from beneficiaries_info_mode.json."""
 
+from supplies_contracts._choices import TextChoices
 
-class BeneficiariesInfoMode:
+
+class BeneficiariesInfoMode(TextChoices):
     __slots__ = ()
 
-    REQUIRED = "REQUIRED"
-    NO_INFO = "NO_INFO"
-    REFUSAL = "REFUSAL"
-    SAME_AS_FOUNDERS = "SAME_AS_FOUNDERS"
-
-    TYPES = (
-        (REQUIRED, "REQUIRED"),
-        (NO_INFO, "NO_INFO"),
-        (REFUSAL, "REFUSAL"),
-        (SAME_AS_FOUNDERS, "SAME_AS_FOUNDERS"),
-    )
-
-    TITLE_BY_CODE = {
-        REQUIRED: "REQUIRED",
-        NO_INFO: "NO_INFO",
-        REFUSAL: "REFUSAL",
-        SAME_AS_FOUNDERS: "SAME_AS_FOUNDERS",
-    }
+    REQUIRED = "REQUIRED", "REQUIRED"
+    NO_INFO = "NO_INFO", "NO_INFO"
+    REFUSAL = "REFUSAL", "REFUSAL"
+    SAME_AS_FOUNDERS = "SAME_AS_FOUNDERS", "SAME_AS_FOUNDERS"
