@@ -1,0 +1,37 @@
+{
+  "name": "tax_types",
+  "items": [
+    {
+      "code": "SIMPLIFIED_5",
+      "title": "УСН 5%"
+    },
+    {
+      "code": "SIMPLE",
+      "title": "УСН 6%"
+    },
+    {
+      "code": "SIMPLIFIED_7",
+      "title": "УСН 7%"
+    },
+    {
+      "code": "SIMPLE_15",
+      "title": "УСН 15%"
+    },
+    {
+      "code": "COMMON",
+      "title": "Общая"
+    },
+    {
+      "code": "AUTOMATED_8",
+      "title": "АУСН 8%"
+    },
+    {
+      "code": "AUTOMATED_20",
+      "title": "АУСН 20%"
+    },
+    {
+      "code": "PATENT",
+      "title": "ПСН"
+    }
+  ]
+}

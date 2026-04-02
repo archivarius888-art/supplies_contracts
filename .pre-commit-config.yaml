@@ -1,0 +1,82 @@
+default_language_version:
+  python: python3.13
+
+repos:
+  - repo: local
+    hooks:
+      - id: absolufy-imports
+        name: absolufy-imports
+        entry: absolufy-imports
+        language: python
+        types: [python]
+        additional_dependencies: [absolufy-imports]
+        args:
+          - "--application-directories"
+          - ":src"
+
+      - id: ruff
+        name: ruff
+        entry: ruff
+        language: python
+        types: [python]
+        additional_dependencies: [ruff]
+        args:
+          - "check"
+
+      - id: autoflake
+        name: autoflake
+        entry: autoflake
+        language: python
+        types: [python]
+        additional_dependencies: [autoflake]
+        args:
+          - "--in-place"
+          - "-r"
+
+      - id: black
+        name: black
+        entry: black
+        language: python
+        types: [python]
+        additional_dependencies: [black]
+        args:
+          - "--target-version"
+          - "py311"
+          - "--target-version"
+          - "py312"
+          - "--target-version"
+          - "py313"
+
+      - id: isort
+        name: isort
+        entry: isort
+        language: python
+        types: [python]
+        additional_dependencies: [isort]
+
+      - id: typos
+        name: typos
+        entry: typos
+        language: python
+        types: [python]
+        additional_dependencies: [typos]
+
+      - id: vulture
+        name: vulture
+        entry: vulture
+        language: python
+        types: [python]
+        additional_dependencies: [vulture]
+        args:
+          - "src"
+
+      - id: yamllint
+        name: yamllint
+        entry: yamllint
+        language: python
+        types: [file, yaml]
+        additional_dependencies: [yamllint]
+        args:
+          - "-d"
+          - "{extends: relaxed, rules: {line-length: disable}}"
+          - "-s"

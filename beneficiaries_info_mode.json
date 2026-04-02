@@ -1,0 +1,9 @@
+{
+  "name": "beneficiaries_info_mode",
+  "items": [
+    { "code": "REQUIRED", "title": "REQUIRED" },
+    { "code": "NO_INFO", "title": "NO_INFO" },
+    { "code": "REFUSAL", "title": "REFUSAL" },
+    { "code": "SAME_AS_FOUNDERS", "title": "SAME_AS_FOUNDERS" }
+  ]
+}
